@@ -1,15 +1,18 @@
 
+
 public abstract class Funcionario implements Pagamento{
 	
 	private final String nome;
 	private final String sobrenome;
 	private final String cpf;
+	private final Data dataDeNascimento;
 	
-	public Funcionario(String nome, String sobrenome, String cpf) {
+	public Funcionario(String nome, String sobrenome, String cpf, Data dataDeNascimento) {
 		super();
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.cpf = cpf;
+		this.dataDeNascimento = dataDeNascimento;
 	}
 
 	public String getNome() {
@@ -23,6 +26,10 @@ public abstract class Funcionario implements Pagamento{
 
 	public String getCpf() {
 		return cpf;
+	}
+	
+	public Data getDataDeNascimento() {
+		return dataDeNascimento;
 	}
 
 	@Override
