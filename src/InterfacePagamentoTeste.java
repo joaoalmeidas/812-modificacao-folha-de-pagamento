@@ -5,10 +5,10 @@ public class InterfacePagamentoTeste {
 		
 		Pagamento[] pagamentos = new Pagamento[4];
 		
-		pagamentos[0] = new Fatura("01234", "banco", 2, 75.3);
-		pagamentos[1] = new Fatura("56789", "pneu", 5, 43.3);
-		pagamentos[2] = new FuncionarioAssalariado("João", "Almeida", "12546566812", 2124);
-		pagamentos[3] = new FuncionarioAssalariado("Maria", "Almeida", "12524566812", 2000);
+		pagamentos[0] = new FuncionarioAssalariado("David", "Beckham", "12546546512", new Data(21, 1, 1993), 12654);
+		pagamentos[1] = new FuncionarioAssalariado("Eric", "Cantona", "125545466812", new Data(1, 8, 1993), 54654);
+		pagamentos[2] = new FuncionarioAssalariado("João", "Almeida", "12546566812", new Data(1, 2, 1993), 2124);
+		pagamentos[3] = new FuncionarioAssalariado("Maria", "Almeida", "12524566812", new Data(1, 1, 1995), 2000);
 		
 		System.out.println("Pagamentos das faturas e dos funcionários processados polimorficamente.");
 		

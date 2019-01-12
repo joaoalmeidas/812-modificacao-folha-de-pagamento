@@ -3,8 +3,8 @@ public class FuncionarioAssalariado extends Funcionario{
 	
 	private double salarioSemanal;
 
-	public FuncionarioAssalariado(String nome, String sobrenome, String cpf, double salarioSemanal) {
-		super(nome, sobrenome, cpf);
+	public FuncionarioAssalariado(String nome, String sobrenome, String cpf, Data dataDeAniversario, double salarioSemanal) {
+		super(nome, sobrenome, cpf, dataDeAniversario);
 		
 		if(salarioSemanal < 0) {
 			
