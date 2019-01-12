@@ -14,6 +14,8 @@ public class InterfacePagamentoTeste {
 		
 		for(Pagamento pagamentoAtual: pagamentos) {
 			
+			
+			
 			System.out.printf("%n%s %n%s: $%,.2f%n", pagamentoAtual.toString(), "valor a pagar", pagamentoAtual.calculaQuantiaPagamento());
 			
 		}

@@ -25,8 +25,6 @@ public class Data {
 		this.dia = dia;
 		this.ano = ano;
 		
-		System.out.printf("Construtor do objeto Data para data: %s%n", this);
-		
 		
 	}
 	

@@ -34,8 +34,8 @@ public abstract class Funcionario implements Pagamento{
 
 	@Override
 	public String toString() {
-		return String.format("\nDados do funcionário:\nNome: %s %s\nCPF:%s\n",
-				getNome(), getSobrenome(), getCpf());
+		return String.format("\nDados do funcionário:\nNome: %s %s\nCPF:%s\nData de nascimento: %s\n",
+				getNome(), getSobrenome(), getCpf(), getDataDeNascimento());
 	}
 	
 	public abstract double calculaGanhos();
