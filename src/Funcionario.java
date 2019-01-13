@@ -1,3 +1,4 @@
+import java.util.Calendar;
 
 
 public abstract class Funcionario implements Pagamento{
@@ -31,11 +32,26 @@ public abstract class Funcionario implements Pagamento{
 	public Data getDataDeNascimento() {
 		return dataDeNascimento;
 	}
+	
+	public String isAniversariante() {
+		
+		final Calendar hoje = Calendar.getInstance();
+		
+		
+		if(hoje.get(Calendar.MONTH) == getDataDeNascimento().getMes() - 1) {
+			
+			return "Bonificação para aniversariante de 500,00\n";
+			
+		}
+		
+		return "";
+			
+	}
 
 	@Override
 	public String toString() {
-		return String.format("\nDados do funcionário:\nNome: %s %s\nCPF:%s\nData de nascimento: %s\n",
-				getNome(), getSobrenome(), getCpf(), getDataDeNascimento());
+		return String.format("\nDados do funcionário:\nNome: %s %s\nCPF:%s\nData de nascimento: %s\n%s",
+				getNome(), getSobrenome(), getCpf(), getDataDeNascimento(), isAniversariante());
 	}
 	
 	public abstract double calculaGanhos();
