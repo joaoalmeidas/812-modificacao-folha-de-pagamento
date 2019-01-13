@@ -35,10 +35,8 @@ public abstract class Funcionario implements Pagamento{
 	
 	public String isAniversariante() {
 		
-		final Calendar hoje = Calendar.getInstance();
 		
-		
-		if(hoje.get(Calendar.MONTH) == getDataDeNascimento().getMes() - 1) {
+		if(Calendar.getInstance().get(Calendar.MONTH) == getDataDeNascimento().getMes() - 1) {
 			
 			return "Bonificação para aniversariante de 500,00\n";
 			
