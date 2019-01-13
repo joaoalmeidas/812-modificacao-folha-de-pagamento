@@ -1,3 +1,4 @@
+import java.util.Calendar;
 
 public class InterfacePagamentoTeste {
 
@@ -12,9 +13,17 @@ public class InterfacePagamentoTeste {
 		
 		System.out.println("Pagamentos das faturas e dos funcionários processados polimorficamente.");
 		
+		
 		for(Pagamento pagamentoAtual: pagamentos) {
 			
+			FuncionarioAssalariado func = (FuncionarioAssalariado) pagamentoAtual;
 			
+			
+			if(func.getDataDeNascimento().getMes() - 1 == Calendar.getInstance().get((Calendar.MONTH))) {
+				
+				func.setSalarioSemanal(func.getSalarioSemanal() + 500);
+				
+			}
 			
 			System.out.printf("%n%s %n%s: $%,.2f%n", pagamentoAtual.toString(), "valor a pagar", pagamentoAtual.calculaQuantiaPagamento());
 			
